@@ -20,7 +20,7 @@ def depth(path):
 
     # 保存图片
     # 保存路径设定
-    output_dir = 'plot/logs_LBupdate_base_BF_DFS_DP'  # 替换为你需要的保存路径
+    output_dir = 'plot/logs_LBupdate_test_DP_adaptive_Ptcompare'  # 替换为你需要的保存路径
     os.makedirs(output_dir, exist_ok=True)
 
     # 保存图像到该路径
@@ -31,7 +31,7 @@ def depth(path):
 exp = exp = ['Data/logs_NewLB/5part_log_5_pruned_per_depth.csv', 'Data/logs_NewLB/10part_log_4_pruned_per_depth.csv', 'Data/logs_NewLB/11part_log_4_pruned_per_depth.csv',
         'Data/logs_NewLB/12part_log_4_pruned_per_depth.csv','Data/logs_NewLB/13part_log_2_pruned_per_depth.csv', 'Data/logs_NewLB/14part_log_3_pruned_per_depth.csv',
        'Data/logs_NewLB/15part_log_3_pruned_per_depth.csv']
-exp1 = ['Data/logs_LBupdate_base_BF_DFS_DP/11part_log_1_pruned_per_depth.csv']
+exp1 = ['Data/logs_LBupdate_test_DP_adaptive_Ptcompare/11part_log_1_pruned_per_depth.csv']
 for i in exp1:
     depth(i)
 

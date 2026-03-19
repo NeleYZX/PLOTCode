@@ -62,7 +62,8 @@ def UB_LB(path):
     plt.tight_layout()
 
     # 保存图像
-    output_dir = 'plot/logs_LBupdate_base_BF_DFS_DP'
+    output_dir = 'plot/case-serial-only'
+    output_dir = 'plot/case-parallel'
     os.makedirs(output_dir, exist_ok=True)
     output_path = os.path.join(output_dir, f'{base_filename}_UB_LB.png')
     plt.savefig(output_path, dpi=300)
@@ -74,8 +75,12 @@ def UB_LB(path):
 exp = ['Data/logs_BF_DFS/5part_log_1_bounds.csv', 'Data/logs_BF_DFS/10part_log_2_bounds.csv', 'Data/logs_BF_DFS/11part_log_3_bounds.csv',
         'Data/logs_BF_DFS/12part_log_1_bounds.csv','Data/logs_BF_DFS/13part_log_1_bounds.csv', 'Data/logs_BF_DFS/14part_log_1_bounds.csv',
        'Data/logs_BF_DFS/15part_log_1_bounds.csv']
-exp1 = ['Data/logs_LBupdate_base_BF_DFS_DP/11part_log_1_bounds.csv']
-for i in exp1:
+exp1 = ['Data/logs_LBupdate_test_DP_adaptive_Ptcompare/11part_log_1_bounds.csv']
+exp2 = ['Data/logs_NewLB/15part_log_3_bounds.csv']
+exp3 = ['Data/case-serial-only/15part_TF=0.6_RDD=0.6_log_1_bounds.csv']
+exp4 = ['Data/case-parallel/15part_TF=0.6_RDD=0.6_log_1_bounds.csv']
+
+for i in exp4:
     UB_LB(i)
 
 
